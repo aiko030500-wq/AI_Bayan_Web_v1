@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Bayan — Full Edition (1–4)</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="assets/logo.png" alt="AI Bayan logo">
+      <h1>Welcome to AI Bayan!</h1>
+    </header>
+
+    <!-- Вход: только PIN, без подсказок -->
+    <div id="authBox" class="auth center">
+      <input id="codeInput" class="pin" type="password" maxlength="4" placeholder="" autocomplete="off">
+      <button class="primary" id="enterBtn">Enter</button>
+      <button class="ghost" id="scoreBtn">Scorebook</button>
+    </div>
+
+    <!-- Главное меню -->
+    <section id="menu" class="grid hidden">
+      <div class="card" data-open="grammar"><div class="title">📘 Grammar</div><div>12 тем × 6 заданий</div></div>
+      <div class="card" data-open="phonetics"><div class="title">🔤 Phonetics</div><div>Diphthongs, Silent Letters</div></div>
+      <div class="card" data-open="vocab"><div class="title">🧠 Vocabulary</div><div>12 тем × 10 слов</div></div>
+      <div class="card" data-open="reading"><div class="title">📖 Reading</div><div>12 текстов + True/False</div></div>
+      <div class="card" data-open="listening"><div class="title">🎧 Listening</div><div>12 диалогов + пропуски</div></div>
+      <div class="card" data-open="speaking"><div class="title">🎙️ Speaking</div><div>ИИ задаёт вопрос — ответ голосом</div></div>
+      <div class="card" data-open="writing"><div class="title">✍️ Writing</div><div>Сочинения</div></div>
+      <div class="card" data-open="dictation"><div class="title">📝 Dictation</div><div>12 тем × 6 предложений</div></div>
+      <div class="card" data-open="verbs"><div class="title">⚡ Irregular Verbs</div><div>50 глаголов</div></div>
+      <div class="card" data-open="time"><div class="title">⏰ Time</div><div>Время и фразы</div></div>
+      <div class="card" data-open="dictionary"><div class="title">📗 Dictionary</div><div>Словарь с озвучкой</div></div>
+      <div class="card" data-open="chat"><div class="title">🤖 AI Bayan Chat</div><div>Помощник</div></div>
+    </section>
+
+    <!-- Рабочая панель -->
+    <section id="work" class="hidden panel">
+      <div class="toolbar">
+        <button id="backToMenu" class="ghost">← Главное меню</button>
+        <div id="title" class="badge"></div>
+      </div>
+      <div class="section-hero"><img src="assets/visuals/main_menu.png" alt=""></div>
+      <div id="content"></div>
+      <div class="nav hidden" id="navBtns">
+        <button class="ghost" id="prevBtn">← Back</button>
+        <button class="primary" id="nextBtn">Next →</button>
+      </div>
+    </section>
+
+    <footer>© AI Bayan — Full Edition (1–4)</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
